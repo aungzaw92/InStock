@@ -1,0 +1,25 @@
+{
+  "name": "instock-server-team-2",
+  "version": "1.0.0",
+  "description": "instock group project",
+  "main": "index.js",
+  "scripts": {
+    "db:migrate": "knex migrate:latest",
+    "db:seed": "knex seed:run",
+    "start": "nodemon server.js",
+    "dev": "nodemon server"
+  },
+  "author": "team-2",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "knex": "^2.5.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.6.1",
+    "nodemon": "^3.0.1",
+    "uniqid": "^5.4.0"
+  }
+}
