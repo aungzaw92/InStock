@@ -1,0 +1,39 @@
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/global' as *;
+
+.WarehouseListHeaderDisplay {
+  display: none;
+  @include tablet {
+    display: block;
+    border-bottom: 1px solid $secondary-color-Cloud;
+    background-color: $background-color-Light-Grey;
+    padding: 0.75rem 0;
+  }
+}
+
+.WarehouseListHeader {
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr 1.5fr 0.7fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    font-size: 0.7rem;
+    color: $secondary-color-Slate;
+  }
+  &__titleAndIcn {
+    display: flex;
+    align-items: center;
+    &--icon {
+      width: 1.5rem;
+      cursor: pointer;
+    }
+    &-action {
+      display: flex;
+      justify-self: center;
+    }
+  }
+}

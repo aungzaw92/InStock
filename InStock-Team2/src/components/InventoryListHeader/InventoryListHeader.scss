@@ -1,0 +1,36 @@
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/global' as *;
+
+.InventoryListHeaderDisplay {
+  display: none;
+  @include tablet {
+    display: block;
+    border-bottom: 1px solid $secondary-color-Cloud;
+    background-color: $background-color-Light-Grey;
+    padding: 1rem 0;
+    padding: 0.75rem 1rem;
+  }
+}
+.InventoryListHeader {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr 1fr 0.5fr 1fr 0.4fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  font-size: 0.7rem;
+  color: $secondary-color-Slate;
+  @include desktop {
+    grid-template-columns: 0.8fr 1fr 1fr 0.5fr 1fr 0.3fr;
+  }
+  &__titleAndIcn {
+    display: flex;
+    align-items: center;
+    &--icon {
+      width: 1.5rem;
+      cursor: pointer;
+    }
+  }
+}

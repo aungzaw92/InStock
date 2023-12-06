@@ -1,0 +1,78 @@
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/global' as *;
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 2.25rem;
+  width: 100%;
+  border: 1px solid $secondary-color-Cloud;
+  border-radius: 1.25rem;
+  padding: 0 1rem;
+  @include tablet {
+    height: 2.375rem;
+  }
+  &::placeholder {
+    color: $secondary-color-Slate;
+    font-size: 0.8125rem;
+  }
+  &:focus-visible {
+    outline: 1px solid $primary-color-Instock-Indigo;
+  }
+
+  &__search {
+    background: url('../../assets/Icons/search-24px.svg') no-repeat right 1rem
+      center;
+    padding-right: 2.5rem;
+    text-transform: none;
+    @include tablet {
+      width: 10rem;
+    }
+  }
+
+  &__userInfo {
+    text-transform: none;
+  }
+
+  &__description {
+    resize: none;
+    text-transform: none;
+    height: 7.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  &__dropDown {
+    border-color: $secondary-color-Cloud;
+    color: $secondary-color-Cloud;
+    border-radius: 1.25rem;
+    height: 2.25rem;
+    width: 100%;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.8125rem;
+    @include tablet {
+      height: 1.875rem;
+    }
+    &:focus {
+      border-color: $primary-color-Instock-Indigo;
+      color: $primary-color-Instock-Black;
+    }
+  }
+
+  &__label {
+    &--labelHeader {
+      height: 2rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      @include tablet {
+        font-size: 0.875rem;
+      }
+    }
+    &--search {
+      display: none;
+    }
+  }
+}

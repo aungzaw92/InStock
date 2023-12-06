@@ -1,0 +1,43 @@
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/global' as *;
+
+.PageHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid $secondary-color-Cloud;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2.25rem;
+    padding-bottom: 1.45rem;
+  }
+  &__left {
+    font-size: 1.75rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    line-height: 2.25rem;
+    @include tablet {
+      font-size: 2rem;
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &--display {
+      display: none;
+    }
+  }
+}

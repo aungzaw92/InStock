@@ -1,0 +1,41 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.warehouse-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  color: $secondary-color-Slate;
+  margin-bottom: 2rem;
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+  }
+
+  &__contact-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__heading {
+    font-size: 0.7rem;
+    padding-top: 0.3rem;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+  }
+  &__info {
+    font-size: 0.815rem;
+    @include tablet {
+      width: 9rem;
+    }
+  }
+  &__address-container {
+    border-bottom: 1px solid $secondary-color-Cloud;
+
+    @include tablet {
+      border-right: 1px solid $secondary-color-Cloud;
+      border-bottom: none;
+    }
+  }
+}
